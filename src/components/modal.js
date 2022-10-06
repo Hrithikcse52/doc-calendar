@@ -22,10 +22,14 @@ export default function ItemModal({ isOpen, onClose, events, index }) {
           <Heading as="h3" size="lg">
             Patient Details
           </Heading>
-          <div>Patient Name: {events[index].patientName}</div>
-          <div>Patient Age: {events[index].age}</div>
-          <div>Patient Gender: {events[index].gender}</div>
-          <div>Patient Problem: {events[index].problemsReported}</div>
+          {events && events[index] && (
+            <>
+              <div>Patient Name: {events[index].patientName}</div>
+              <div>Patient Age: {events[index].age}</div>
+              <div>Patient Gender: {events[index].gender}</div>
+              <div>Patient Problem: {events[index].problemsReported}</div>
+            </>
+          )}
         </ModalBody>
         <ModalFooter>
           <Flex
@@ -39,15 +43,15 @@ export default function ItemModal({ isOpen, onClose, events, index }) {
               leftIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-brand-whatsapp"
+                  className="icon icon-tabler icon-tabler-brand-whatsapp"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke="currentColor"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
@@ -62,15 +66,15 @@ export default function ItemModal({ isOpen, onClose, events, index }) {
               leftIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-prescription"
+                  className="icon icon-tabler icon-tabler-prescription"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke="currentColor"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M6 19v-16h4.5a4.5 4.5 0 1 1 0 9h-4.5"></path>
@@ -86,15 +90,15 @@ export default function ItemModal({ isOpen, onClose, events, index }) {
               leftIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-calendar-time"
+                  className="icon icon-tabler icon-tabler-calendar-time"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke="currentColor"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
@@ -113,15 +117,15 @@ export default function ItemModal({ isOpen, onClose, events, index }) {
               leftIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-message-circle"
+                  className="icon icon-tabler icon-tabler-message-circle"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke="currentColor"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M3 20l1.3 -3.9a9 8 0 1 1 3.4 2.9l-4.7 1"></path>

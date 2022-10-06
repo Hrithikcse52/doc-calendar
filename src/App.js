@@ -57,7 +57,7 @@ function App() {
     str: "",
     start: null,
     end: null,
-    type: "patient",
+    type: "gender",
   });
   const calender = useRef();
 
@@ -138,6 +138,7 @@ function App() {
           <label>
             Select Filter Type
             <Select
+              value={filterValue.type}
               onChange={(e) => {
                 console.log(e.target.value);
                 setFilterValue({ ...filterValue, type: e.target.value });
